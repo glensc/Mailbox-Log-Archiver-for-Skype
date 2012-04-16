@@ -31,6 +31,7 @@ class Plugin(object):
     def __init__(self, archiver):
         self.archiver = archiver
         self.skype= Skype4Py.Skype()
+        self.skype.FriendlyName = 'mlas'
         self.skype.OnAttachmentStatus = self.on_attach
         self.skype.OnMessageStatus = self.on_message_status
         self.attach_unwearing()
